@@ -1,0 +1,127 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Section */
+.header {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.home-button {
+    text-decoration: none;
+    color: #007BFF;
+    background-color: #fff;
+    border: 2px solid #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.home-button:hover {
+    background-color: #fff;
+    color: #007BFF;
+}
+
+/* Main Content */
+.main-content {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.balance-section, .transactions-section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #007BFF;
+}
+
+.balance-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.balance-box p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.balance-box h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    color: #28a745;
+}
+
+/* Transaction Table */
+.transactions-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.transactions-table th, .transactions-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.transactions-table th {
+    background-color: #007BFF;
+    color: #fff;
+    font-weight: bold;
+}
+
+.transactions-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.transactions-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Footer Section */
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 14px;
+}

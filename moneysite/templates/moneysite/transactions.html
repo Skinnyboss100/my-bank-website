@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'moneysite/transaction.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header class="header">
+        <div class="navbar">
+            <h1 class="dashboard-title">Banking Dashboard</h1>
+            <nav>
+                <a href="{% url 'moneysite-account' %}" class="home-button">Home</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="balance-section">
+            <h2>Account Balance</h2>
+            <div class="balance-box">
+                <p>Your Current Balance:</p>
+                <h3>${{ total_balance }}</h3>
+            </div>
+        </section>
+
+        <section class="transactions-section">
+            <h2>Recent Transactions</h2>
+            <table class="transactions-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for transaction in transactions %}
+                    <tr>
+                        <td>{{ transaction.date }}</td>
+                        <td>{{ transaction.description }}</td>
+                        <td>${{ transaction.amount }}</td>
+                        <td>{{ transaction.get_transaction_type_display }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Moneysite. All rights reserved.</p>
+    </footer>
+</body>
+</html>

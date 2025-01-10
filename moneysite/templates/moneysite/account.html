@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Balance</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'moneysite/account.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header class="header">
+        <h1>MONEYSITE</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="{% url 'moneysite-account' %}">Account Home</a></li>
+                <li><a href="{% url 'transcations-page' %}">Transactions</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="balance-section">
+            <h2>Your Account Balance</h2>
+            <div class="balance-box">
+                <p>Account Number: <strong>{{account.user.username}}</strong></p>
+                <p>Balance: <span class="balance-amount">${{account.balance}}</span></p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 Bank Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
